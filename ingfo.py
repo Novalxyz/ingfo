@@ -11,7 +11,7 @@ try:
     import requests
 except ImportError:
     os.system("pip2 install requests")
-    os.system("python2 kkr.py")
+    os.system("python2 ingfo.py")
 from requests.exceptions import ConnectionError
 from mechanize import Browser
 from datetime import datetime
@@ -50,14 +50,12 @@ def jalan(z):
 #########LOGO#########
 logo = """
 ╔═════════════════════════════════════════════╗
-║             KAUM KUSAM REPORTING            ║
+║             ORIGINAL CRACK TOOLS            ║
 ║═════════════════════════════════════════════║
-║     Crack Akun Facebook Indonesia only      ║
-╚═════════════════════════════════════════════╝
 ╔═════════════════════════════════════════════╗
-║ Author   : Muisz                            ║
-║ Facebook : https://www.facebook.com/gwmuisz ║
-║ Github   : https://github.com/gwmuisz        ║
+║ Author   : Noval KR.                        ║
+║ Facebook : https://www.facebook.com/akunoval║
+║ Github   : https://github.com/Novalxyz      ║
 ╚═════════════════════════════════════════════╝"""
 back = 0
 threads = []
@@ -116,7 +114,7 @@ def tokenz():
         print "[!] Token Mungkin Salah/Kadalwarsa"
         time.sleep(1.7)
         menu()
-        os.system('python2 kkr.py')
+        os.system('python2 ingfo.py')
 ##### AMBIL LINK #####
 def ambil_link():
     os.system("clear")
@@ -136,7 +134,7 @@ def update_sc():
     os.system("git pull origin master")
     print "update selesai"
     raw_input("\n[Kembali] ? ?")
-    os.system("python2 kkr.py")
+    os.system("python2 ingfo.py")
     masuk() 
 ###### MENU #######
 def menu():
